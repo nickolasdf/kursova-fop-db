@@ -48,6 +48,7 @@ class App extends React.Component {
                         <Switch>
                             <GuestRoute exact path="/" component={Login}/>
                             <PrivateRoute exact path="/admin" component={Admin}/>
+                            <PrivateRoute exact path="/fop/:id" component={Admin}/>
                             <Route exact path="/404" component={PageNotFound}/>
                             <Route component={PageNotFound}/>
                         </Switch>

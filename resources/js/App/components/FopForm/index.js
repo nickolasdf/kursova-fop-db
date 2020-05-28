@@ -7,6 +7,7 @@ import requests from '../../requests';
 import { throwAlert } from '../../reducers/App/actions';
 import { SUCCESS } from '../../config/alertVariants';
 import { getFops } from '../../reducers/FopList/actions';
+import "./index.scss";
 
 const FopForm = ({ onClose }) => {
     const [form, setForm] = useState({
@@ -56,75 +57,93 @@ const FopForm = ({ onClose }) => {
     return (
         <form className="fop-form" onSubmit={submitForm}>
             <FormWrapper onClose={onClose}>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>ПІБ</Grid>
-                    <Grid item xs={8}>
-                        <TextField fullWidth={true} onChange={handleChange('name')}/>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">ПІБ</label></Grid>
+                        <Grid item xs={8}>
+                            <TextField fullWidth={true} onChange={handleChange('name')}/>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>Адреса</Grid>
-                    <Grid item xs={8}>
-                        <TextField fullWidth={true} onChange={handleChange('address')}/>
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">Адреса</label></Grid>
+                        <Grid item xs={8}>
+                            <TextField fullWidth={true} onChange={handleChange('address')}/>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>КВЕДи</Grid>
-                    <Grid item xs={8}>
-                        <Select
-                            style={{ width: '100%' }}
-                            value={form.activities}
-                            multiple={true}
-                            onChange={handleSelect}
-                        >
-                            <MenuItem value="kved65">КВЕД 65</MenuItem>
-                            <MenuItem value="kved67">КВЕД 67</MenuItem>
-                            <MenuItem value="kved68">КВЕД 68</MenuItem>
-                        </Select>
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">КВЕДи</label></Grid>
+                        <Grid item xs={8}>
+                            <Select
+                                style={{ width: '100%' }}
+                                value={form.activities}
+                                multiple={true}
+                                onChange={handleSelect}
+                            >
+                                <MenuItem value="kved65">КВЕД 65</MenuItem>
+                                <MenuItem value="kved67">КВЕД 67</MenuItem>
+                                <MenuItem value="kved68">КВЕД 68</MenuItem>
+                            </Select>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>Реєстраційний номер</Grid>
-                    <Grid item xs={8}>
-                        <TextField fullWidth={true} onChange={handleChange('registrationNumber')}/>
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">Реєстраційний номер</label></Grid>
+                        <Grid item xs={8}>
+                            <TextField fullWidth={true} onChange={handleChange('registrationNumber')}/>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>Місце реєстрації</Grid>
-                    <Grid item xs={8}>
-                        <TextField fullWidth={true} onChange={handleChange('registerLocation')}/>
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">Місце реєстрації</label></Grid>
+                        <Grid item xs={8}>
+                            <TextField fullWidth={true} onChange={handleChange('registerLocation')}/>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>Дата реєстрації</Grid>
-                    <Grid item xs={8}>
-                        <DatePicker
-                            style={{ width: '100%' }}
-                            variant="inline"
-                            autoOk
-                            onChange={handleDateChange}
-                            value={form.registrationDate}
-                        />
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">Дата реєстрації</label></Grid>
+                        <Grid item xs={8}>
+                            <DatePicker
+                                style={{ width: '100%' }}
+                                variant="inline"
+                                autoOk
+                                onChange={handleDateChange}
+                                value={form.registrationDate}
+                            />
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>Номер телефону</Grid>
-                    <Grid item xs={8}>
-                        <TextField fullWidth={true} onChange={handleChange('phone')}/>
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">Номер телефону</label></Grid>
+                        <Grid item xs={8}>
+                            <TextField fullWidth={true} onChange={handleChange('phone')}/>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>Електронна пошта</Grid>
-                    <Grid item xs={8}>
-                        <TextField fullWidth={true} onChange={handleChange('email')}/>
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">Електронна пошта</label></Grid>
+                        <Grid item xs={8}>
+                            <TextField fullWidth={true} onChange={handleChange('email')}/>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container alignItems="center">
-                    <Grid item xs={4}>Податковий номер</Grid>
-                    <Grid item xs={8}>
-                        <TextField fullWidth={true} onChange={handleChange('taxNumber')}/>
+                </div>
+                <div className="fop-form__row">
+                    <Grid container alignItems="flex-end">
+                        <Grid item xs={4}><label className="form-label">Податковий номер</label></Grid>
+                        <Grid item xs={8}>
+                            <TextField fullWidth={true} onChange={handleChange('taxNumber')}/>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </div>
             </FormWrapper>
         </form>
     );

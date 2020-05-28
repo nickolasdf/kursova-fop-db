@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-        <title>React-CRM</title>
+        <title>FOP</title>
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     </head>
     <body>
