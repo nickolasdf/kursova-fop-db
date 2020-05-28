@@ -20,12 +20,9 @@ use Faker\Generator as Faker;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'first_name' => $faker->firstName,
-        'last_name' => $faker->lastName,
-        'sex' => $faker->randomElement([ Enum::SexStatus_Man, Enum::SexStatus_Woman ]),
+        'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => 'Qwerty1@',
+        'password' => '123456',
         'remember_token' => Str::random(10),
     ];
 });

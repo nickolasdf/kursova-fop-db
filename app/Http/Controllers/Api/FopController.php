@@ -11,7 +11,6 @@ use App\Http\Requests\Api\Fop\FopRequest;
 use App\Http\Requests\Api\Fop\FopUpdateRequest;
 use App\Http\Resources\FopResource;
 use App\Models\Fop;
-use App\Models\Hosting;
 use App\Traits\HelperData;
 use Illuminate\Support\Facades\Log;
 
@@ -21,10 +20,10 @@ class FopController extends Controller
 
     public function index(FopDataRequest $request, FopFilter $filter)
     {
-        $fops = Fop::with(['_sites', '_server'])
+        $fops = Fop::with(['_fop_incomes', '_fop_taxes'])
             ->sorting($request)
+            ->search($request)
             ->filter($filter)
-            ->forShow()
             ->paginate($request->get('per_page', Fop::Paginate_PerPage));
 
         return FopResource::collection($fops);
@@ -34,7 +33,7 @@ class FopController extends Controller
     {
         try {
             $data = $this->prepareData($request);
-            $fop = Hosting::create($data);
+            $fop = Fop::create($data);
             $response = ['result' => true, 'message' => 'FOP created successfully.', 'data' => new FopResource($fop)];
             $status = 200;
 
@@ -59,8 +58,7 @@ class FopController extends Controller
     {
         try{
             $data = $this->prepareData($request);
-            $fop = Fop::find($id);
-            $fop->update($data);
+            Fop::whereId($id)->update($data);
             $response = ['result' => true, 'message' => 'FOP update successfully.'];
             $status = 200;
 

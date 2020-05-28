@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Requests\Api\Fop;
+namespace App\Http\Requests\Api\Tax;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class CommentRequest extends FormRequest
+class TaxRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,10 +26,7 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-            'hosting' => ['numeric','exists:hostings,id'],
-            'comment' => ['required_without:image', 'nullable', 'string', 'max:3000'],
-            'image_name' => ['nullable', 'string', 'max:150'],
-            'image' => ['nullable', 'string'],
+            'tax' => ['numeric', 'exists:taxes,id'],
         ];
     }
 
