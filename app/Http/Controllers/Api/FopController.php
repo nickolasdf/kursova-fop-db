@@ -9,6 +9,7 @@ use App\Http\Requests\Api\Fop\FopCreateRequest;
 use App\Http\Requests\Api\Fop\FopDataRequest;
 use App\Http\Requests\Api\Fop\FopRequest;
 use App\Http\Requests\Api\Fop\FopUpdateRequest;
+use App\Http\Resources\FopOnlyResource;
 use App\Http\Resources\FopResource;
 use App\Models\Fop;
 use App\Models\Tax;
@@ -28,7 +29,7 @@ class FopController extends Controller
             ->filter($filter)
             ->paginate($request->get('per_page', Fop::Paginate_PerPage));
 
-        return FopResource::collection($fops);
+        return FopOnlyResource::collection($fops);
     }
 
     public function store(FopCreateRequest $request)
