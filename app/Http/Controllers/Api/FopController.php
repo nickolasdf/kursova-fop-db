@@ -11,7 +11,9 @@ use App\Http\Requests\Api\Fop\FopRequest;
 use App\Http\Requests\Api\Fop\FopUpdateRequest;
 use App\Http\Resources\FopResource;
 use App\Models\Fop;
+use App\Models\Tax;
 use App\Traits\HelperData;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class FopController extends Controller
@@ -90,16 +92,33 @@ class FopController extends Controller
 
     public function addIncome(FopAddIncomeRequest $request, $id)
     {
+        DB::beginTransaction();
         try{
             $data = $this->prepareData($request);
             $fop = Fop::find($id);
-            $fop->_fop_incomes()->create($data);
+            $income = $fop->_fop_incomes()->create($data);
+
+            $taxes = Tax::get();
+            $createData = [];
+            foreach ($taxes as $tax) {
+                $createData[] = [
+                    'fop_income_id' => $income->getId(),
+                    'tax_id' => $tax->getId(),
+                    'total' => $income->total * $tax->percent / 100,
+                    'date' => $income->date,
+                ];
+            }
+            if (!empty($createData)) {
+                $fop->_fop_taxes()->createMany($createData);
+            }
 
             $response = ['result' => true, 'message' => 'FOP INCOME fields access update successfully.'];
             $status = 200;
+            DB::commit();
 
         } catch (\Exception $e){
 
+            DB::rollBack();
             Log::error('Exception in FOP INCOME fields access update: ', ['exception' => $e]);
             $response = ['result' => false, 'message' => 'Problems in FOP INCOME fields access update.'];
             $status = 409;
