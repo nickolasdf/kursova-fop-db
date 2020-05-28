@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\Models\Fop;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -17,11 +17,16 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(Fop::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
+        'address' => $faker->address,
+        'activities' => [rand(10,20), rand(20,30)],
+        'registrationNumber' => Str::random(10),
+        'registerLocation' => Str::random(3),
+        'registrationDate' => now(),
+        'phone' => $faker->phoneNumber,
         'email' => $faker->unique()->safeEmail,
-        'password' => '123456',
-        'remember_token' => Str::random(10),
+        'taxNumber' => Str::random(10),
     ];
 });

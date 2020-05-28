@@ -1,13 +1,8 @@
 <?php
 
-use App\Models\Enum;
-use App\Models\Project;
-use App\Models\UserEmployee;
-use App\Models\UserProfile;
 use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
 class CreateUsersSeeder extends Seeder
 {
