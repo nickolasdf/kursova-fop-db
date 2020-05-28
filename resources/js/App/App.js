@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Router, Switch } from 'react-router-dom';
 import Login from './pages/AuthPage';
+import Admin from './pages/Admin';
 import { logInFailure, logInSuccess, logOut, setUser } from './reducers/Auth/actions';
 import { throwAlert } from './reducers/App/actions';
 import { connect } from 'react-redux';
@@ -11,6 +12,8 @@ import SnackBar from './components/SnackBar';
 import PageNotFound from './pages/PageNotFound';
 import history from './history';
 import moment from 'moment';
+import ContentWrapper from './components/ContentWrapper';
+import PrivateRoute from './routes/PrivateRoute';
 
 class App extends React.Component {
     constructor(props) {
@@ -40,13 +43,16 @@ class App extends React.Component {
         return (
             <div className="App">
                 <SnackBar/>
-                <Router history={history}>
-                    <Switch>
-                        <GuestRoute exact path="/" component={Login}/>
-                        <Route exact path="/404" component={PageNotFound}/>
-                        <Route component={PageNotFound}/>
-                    </Switch>
-                </Router>
+                <ContentWrapper>
+                    <Router history={history}>
+                        <Switch>
+                            <GuestRoute exact path="/" component={Login}/>
+                            <PrivateRoute exact path="/admin" component={Admin}/>
+                            <Route exact path="/404" component={PageNotFound}/>
+                            <Route component={PageNotFound}/>
+                        </Switch>
+                    </Router>
+                </ContentWrapper>
             </div>
         );
     }

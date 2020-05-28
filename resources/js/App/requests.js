@@ -201,6 +201,12 @@ const BankDetail = {
     edit: (id, body) => requests.patch(`/bank-detail/${id}`, body)
 };
 
+const Fop = {
+    getAll: () => requests.get('/fop'),
+    create: body => requests.post('/fop', body),
+    delete: id => requests.del(`/fop/${id}`)
+};
+
 export default {
     Auth,
     User,
@@ -222,5 +228,6 @@ export default {
     Hostings,
     Servers,
     Comments,
-    BankDetail
+    BankDetail,
+    Fop
 };

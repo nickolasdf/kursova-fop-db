@@ -49,6 +49,15 @@ Route::group(['namespace' => 'Api'], function () {
 
         });
 
+        Route::group(['prefix' => '/tax'], function () {
+            Route::get('/', 'TaxController@index');
+            Route::post('/', 'TaxController@store');
+            Route::get('/{tax}', 'TaxController@show');
+            Route::put('/{tax}', 'TaxController@update');
+            Route::delete('/{tax}', 'TaxController@delete');
+
+        });
+
     });
 
 });

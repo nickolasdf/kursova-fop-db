@@ -1,0 +1,12 @@
+.form-wrapper {
+    padding: 50px;
+
+    &__actions {
+        margin: 50px -0.5rem 0 -0.5rem;
+        display: flex;
+
+        &__item {
+            margin: 0 0.5rem;
+        }
+    }
+}

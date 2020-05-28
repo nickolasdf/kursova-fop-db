@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ERROR } from '../../config/alertVariants';
 import requests from '../../requests';
 import { connect } from 'react-redux';
 import { logInSuccess, setUser } from '../../reducers/Auth/actions';
@@ -24,7 +25,7 @@ const Login = ({ logInSuccess, throwAlert, history }) => {
                 }
             })
             .then(() => {
-                history.push('/profile');
+                history.push('/admin');
             })
             .catch(error => {
                 throwAlert(ERROR, 'Неправильний логін або пароль');
