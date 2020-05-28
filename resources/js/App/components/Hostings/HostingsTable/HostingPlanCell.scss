@@ -1,0 +1,12 @@
+.hosting_plan_cell_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.hosting_plan_cell_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.hosting_plan_cell_date {
+    margin-right: 16px;
+}

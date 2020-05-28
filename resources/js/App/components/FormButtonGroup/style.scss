@@ -1,0 +1,15 @@
+.form_button_group {
+    background-color: white;
+    padding: 0 50px;
+    .action_btn {
+        margin: 15px 0;
+        padding: 12px 22px;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .action_btn:hover {
+        cursor: pointer;
+        background-color: #ffd63c;
+    }
+}

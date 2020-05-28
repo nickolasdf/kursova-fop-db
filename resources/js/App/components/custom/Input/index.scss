@@ -1,0 +1,44 @@
+.custom_input_wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom_input_root, .custom_textarea_root {
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    padding: 0 16px;
+    z-index: 1;
+    transition: all 0.2s;
+
+    &:focus {
+        border: 1px solid #ffd63c;
+        z-index: 2;
+        box-shadow: inset 0 0 4px 0 rgba(255, 214, 60, 1), 0 0 4px 0 rgba(255, 214, 60, 1);
+    }
+}
+
+.custom_textarea_root {
+    padding: 16px;
+    resize: none;
+}
+
+.custom_input_error {
+    border: 1px solid #ff5454;
+    z-index: 2;
+    box-shadow: inset 0 0 4px 0 rgba(255, 84, 84, 1), 0 0 4px 0 rgba(255, 84, 84, 1);
+
+    &:focus {
+        border: 1px solid #ff5454;
+        box-shadow: inset 0 0 4px 0 rgba(255, 84, 84, 1), 0 0 4px 0 rgba(255, 84, 84, 1);
+    }
+}
+
+.custom_input_error_icon {
+    position: absolute;
+    z-index: 2;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff5454;
+}

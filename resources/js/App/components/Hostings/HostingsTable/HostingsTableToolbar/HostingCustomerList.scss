@@ -1,0 +1,28 @@
+.hosting-customers {
+    height: 100%;
+    border-left: 1px solid #ECECEC;
+    &__title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    &__block-list {
+        overflow: auto;
+        height: calc(100% - 60px)
+    }
+    &__item {
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid #ECECEC;
+        padding: 16px;
+        &__name {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        &__server {
+            font-size: 0.8rem;
+        }
+    }
+}

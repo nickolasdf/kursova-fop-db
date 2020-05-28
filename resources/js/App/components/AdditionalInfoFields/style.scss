@@ -1,0 +1,23 @@
+.white-container__additional-info__social-links {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.white-container__additional-info__input {
+    padding: 11px 12px;
+    flex: 0 1 320px;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    outline: none;
+    font-size: 0.9375rem;
+}
+
+.white-container__additional-info__add-input {
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    font-size: 0.875rem;
+}
+
+.white-container__additional-info__add-input::-webkit-input-placeholder {
+    color: #000a12;
+}

@@ -1,0 +1,23 @@
+.hosting-form__action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 4px 0;
+    &__title {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    &__description {
+        font-size: 0.9rem;
+    }
+}
+.hosting-form__remind-btn {
+    background-color: black;
+    color: white;
+}
+.hosting-form__extend-btn {
+    background-color: #FFD63C;
+}
+

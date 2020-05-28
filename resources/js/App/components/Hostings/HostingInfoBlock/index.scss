@@ -1,0 +1,21 @@
+.hosting_statistics_block {
+    display: flex;
+    padding: 16px;
+    background-color: #1E1E1E;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    .hosting_statistics_item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 16px;
+        border-left: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+    .hosting_statistics_first_item {
+        border: none;
+    }
+    .hosting_statistics_amount {
+        color: #FFD63C;
+    }
+}

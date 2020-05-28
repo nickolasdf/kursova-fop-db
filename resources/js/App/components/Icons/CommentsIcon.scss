@@ -1,0 +1,13 @@
+.comments_icon_svg {
+    fill: #EFEFEF;
+    transition: fill 0.2s;
+    &:hover {
+        fill: #FFD63C;
+        circle {
+            fill: #333333;
+        }
+    }
+    circle {
+        fill: #AFAFAF;
+    }
+}

@@ -1,0 +1,37 @@
+.t-body__info {
+    font-size: 0.8125rem;
+    opacity: 0.6;
+}
+
+.t-body__btn {
+    border-radius: 2px;
+    padding: 7px 10px;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    outline: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.t-body__btn__title {
+    padding-left: 7px;
+}
+
+.btn--accept {
+    background-color: #f1fce4;
+    border: 1px solid #b7e28a;
+    color: #669e33;
+}
+
+.btn--repeated {
+    background-color: #e4fcf5;
+    border: 1px solid #8ae2d0;
+    color: #339e94;
+}
+
+.btn--scheduled {
+    background-color: #fafafa;
+    border: solid 1px #e5e5e5;
+    color: #919a96;
+}

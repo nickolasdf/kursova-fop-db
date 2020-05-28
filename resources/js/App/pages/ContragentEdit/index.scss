@@ -1,0 +1,130 @@
+$item-margin: 0.5;
+
+.contragent_edit_page {
+    .contragent_item_card {
+        height: 400px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    .table_wrapper {
+        margin-top: 24px;
+    }
+
+    .content_header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    .customer_form_actions_wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.contragent {
+
+    &__button-container {
+        margin: 1.35rem 0;
+        width: 100%;
+    }
+
+    &__details-container {
+        padding: 16px 24px 16px 24px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    &__address {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        margin-top: -16px;
+    }
+
+    &__location-icon {
+        margin: 1px 6px 6px 6px;
+        color: #6D707E;
+    }
+
+    &__bank-details {
+        background-color: #FAFAFA;
+        font-size: 0.9rem;
+        overflow: auto;
+        height: calc(100% - 60px);
+        padding: 16px;
+
+        &__item {
+            margin: 8px 0;
+        }
+    }
+
+    &__bank-details-header {
+        font-weight: bold;
+    }
+
+    &__button-group {
+        display: flex;
+        margin: -0.5rem;
+
+        &__item {
+            margin: 0.5rem;
+        }
+    }
+}
+
+.form-header {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.charts_wrapper {
+    display: flex;
+    flex: 1;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+
+    .area_chart_wrapper {
+        width: 100%;
+    }
+}
+
+.charts_wrapper > * {
+    margin: $item-margin * 1%;
+}
+
+@media (max-width: 1400px) {
+    .charts_wrapper {
+        .area_chart_wrapper {
+            width: 100%
+        }
+    }
+}
+
+.info-edit-textinput {
+    height: 100%;
+    border: 1px dashed #c3c3c3;
+    border-radius: 4px;
+    line-height: 1.6;
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chart-year-switch {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin: 0 .4rem;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}

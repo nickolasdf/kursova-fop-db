@@ -1,0 +1,5 @@
+export const USERS_SUCCESS = "USERS_SUCCESS";
+export const USERS_FAILURE = "USERS_FAILURE";
+export const USERS_LOADING = "USERS_LOADING";
+export const USERS_PARAMS = "USERS_PARAMS";
+export const USERS_RESET = "USERS_RESET";

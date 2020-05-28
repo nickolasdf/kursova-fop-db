@@ -1,0 +1,20 @@
+.donut-tooltip {
+    position: relative;
+
+    &__color-item {
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin-right: 8px;
+    }
+
+    &__label-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__value {
+        font-weight: bold;
+        margin-left: 16px;
+    }
+}

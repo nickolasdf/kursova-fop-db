@@ -1,0 +1,10 @@
+.table_sort_icon {
+    display: flex;
+    flex-direction: column;
+    .arrow_up_icon {
+        margin-bottom: -6px;
+    }
+    .arrow_down_icon {
+        margin-top: -6px;
+    }
+}

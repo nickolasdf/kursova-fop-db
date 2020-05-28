@@ -1,0 +1,40 @@
+.dashboard_page {
+    .pick-date__container {
+        display: flex;
+        margin: 20px 0;
+        padding-left: 3px;
+        position: relative;
+    }
+
+    .pick-date__options {
+        display: flex;
+    }
+
+    .pick-date__period {
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    .pick_date_arrow_wrapper {
+        margin: 0 4px;
+    }
+    .pick-date--padding-left-zero {
+        padding-left: 0;
+    }
+    .dashboard_period_btn {
+        display: flex;
+        border-radius: 8px;
+        padding: 10px 16px;
+        background-color: #ffd63c;
+        margin-right: 16px;
+        &:hover {
+            background-color: #ffe68f;
+            transition: background-color 0.4s;
+        }
+    }
+    .pick-date__picker {
+        display: flex;
+    }
+}

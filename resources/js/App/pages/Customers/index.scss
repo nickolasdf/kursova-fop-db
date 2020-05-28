@@ -1,0 +1,26 @@
+.customer_page {
+    .title_section {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.customers_nav_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_customer_btn {
+    background-color: #ffd63c;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.4s;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+    &:hover {
+        background-color: rgba(255, 210, 66, 0.51);
+        color: black;
+    }
+    .add_customer_icon {
+        margin-right: 16px;
+    }
+}

@@ -1,0 +1,168 @@
+.transaction_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    .amount_input {
+        width: 100%;
+        font-size: 18px;
+        border-left: none;
+        border-right: none;
+        min-height: 50px;
+        padding: 0 12px;
+    }
+
+    .amount_input_wrapper {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .transaction_amount_icon {
+        min-width: 40px;
+        color: #8a8d9a;
+        background-color: #f1f3f4;
+        border: solid 1px #e0e0e0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .transaction_form_input {
+        font-size: 14px;
+        padding: 0 12px;
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .transaction_form_wrapper {
+        padding: 50px;
+        background-color: #f9f9f9;
+        flex: 1;
+    }
+
+    .form_date_actions_wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        height: 100%;
+    }
+
+    .form_date_action {
+        color: #8a8d9a;
+        font-size: 14px;
+        height: 100%;
+    }
+
+    .date_picker_wrapper {
+        position: relative;
+    }
+
+    .input_date_freq {
+        min-height: 40px;
+        font-size: 14px;
+        padding: 0 12px;
+        margin: 8px 0;
+    }
+
+    .close_repeat_button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .description_wrapper {
+        display: flex;
+    }
+
+    .description_input {
+        border-right: none;
+    }
+
+    .attach_file_icon_input {
+        display: none;
+    }
+
+    .attach_file_name_wrapper, .attach_file_icon_wrapper, .clear_attach_file_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin-top: -1px;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        padding-right: 16px;
+    }
+
+    .attach_file_icon_wrapper {
+        border-right: 1px solid #e0e0e0;
+        padding: 0;
+        min-width: 50px;
+    }
+
+    .attach_file_name_wrapper {
+        color: #5d7cf6;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .file_name, .attach_file_label {
+        cursor: pointer;
+    }
+
+    .clear_attach_file_icon {
+        color: #bfbfbf;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .repeat_btn_title {
+        margin-right: 8px;
+    }
+}
+
+.transaction_form_currency_symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    border: 1px solid #e0e0e0;
+    color: #8a8d9a;
+    font-size: 14px;
+}
+
+.plus-button {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outside_transaction_form_wrapper {
+    display: flex;
+    max-height: 650px;
+
+    .transaction_comments_wrapper {
+        min-width: 400px;
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+
+.select-with-plus-button > div:nth-child(3) > div {
+    position: static;
+}
+
+.select-with-plus-button div.option:last-child {
+    padding: 0 !important;
+}

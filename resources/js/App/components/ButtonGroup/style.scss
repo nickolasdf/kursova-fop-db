@@ -1,0 +1,56 @@
+.btn-group {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+}
+
+.btn-group__item {
+    margin-right: 8px;
+}
+.btn-group {
+    .expense_btn {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    .transfer_btn {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    .income_btn {
+        border-radius: 2px;
+    }
+    .exp_imp_wrapper {
+        display: flex;
+    }
+    .dashboard_import_btn {
+        border-right: solid 1px #efefef;
+        margin-right: -1px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .dashboard_export_btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .dashboard_import_btn, .dashboard_export_btn {
+        background-color: white;
+        border: solid 1px #efefef;
+        &:hover {
+            background-color: #cdcdcd;
+            transition: background-color 0.4s;
+        }
+    }
+    .dashboard_filter_btn {
+        background-color: #ffd63c;
+        &:hover {
+            background-color: #ffe68f;
+        }
+    }
+}
+
+
+@media screen and (max-width: 741px) {
+    .btn-group__item {
+        margin-top: 10px;
+    }
+}

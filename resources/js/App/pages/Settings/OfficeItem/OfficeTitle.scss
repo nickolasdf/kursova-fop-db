@@ -1,0 +1,22 @@
+.office-title {
+    display: flex;
+    align-items: center;
+
+    &__mg {
+        margin-right: 0.5rem;
+    }
+
+    &__edit-icon {
+        font-size: 1.2rem;
+    }
+
+    &__name-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+}

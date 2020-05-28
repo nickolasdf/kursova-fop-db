@@ -1,0 +1,36 @@
+.account_form_wrapper {
+    padding: 50px;
+    background-color: #FAFAFA;
+    .input_wrapper {
+        width: 100%;
+        height: 100%;
+        margin-top: -1px;
+    }
+    .input_label_wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .form_actions {
+        margin-top: 24px;
+    }
+    .action_btn {
+        margin: 15px 0;
+        padding: 12px 22px;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .action_btn:hover {
+        cursor: pointer;
+        background-color: #ffd63c;
+    }
+    .account_form_title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    .account_form_inputs {
+        margin-left: 16px;
+    }
+}

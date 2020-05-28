@@ -1,0 +1,31 @@
+.user_is_available,
+.user_not_available {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    width: 80px;
+    height: 30px;
+}
+.user_is_available {
+    color: #08a902;
+    border: solid 1px #b7e28a;
+    background-color: #f1fce4;
+}
+
+.user_not_available {
+    border: solid 1px #ff7c7c;
+    background-color: #fafafa;
+    color: #ff3c3c;
+}
+
+.user_search_field {
+    display: flex;
+    width: 90%;
+    border: solid 1px #e0e0e0;
+    flex: 1 1 200px;
+    padding: 0 1.2rem;
+    height: 40px;
+    margin: 10px 0;
+    font-size: 1rem;
+}

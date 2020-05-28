@@ -1,0 +1,27 @@
+.choose_repeat_wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    .input_date_freq {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 4px;
+        max-width: 120px;
+    }
+    .repeat_save_btn {
+        border-radius: 8px;
+        background-color: #ffd63c;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 8px 16px;
+        transition: background-color 0.4s;
+        &:hover {
+            background-color: rgba(255, 214, 60, 0.61);
+        }
+    }
+    .repeat_menu_item {
+        margin-bottom: 12px;
+    }
+}

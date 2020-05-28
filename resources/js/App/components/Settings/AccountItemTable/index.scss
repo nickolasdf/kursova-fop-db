@@ -1,0 +1,21 @@
+.add_sub_account_item_btn {
+    border: 1px solid #E7EAED;
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #7D818A;
+    white-space: nowrap;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: #D9D9D9;
+    }
+}
+.account-item-table__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}

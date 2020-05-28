@@ -1,0 +1,17 @@
+.icon-picker {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 4px;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin: 4px;
+    }
+}
+

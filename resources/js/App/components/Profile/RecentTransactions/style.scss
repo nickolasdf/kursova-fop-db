@@ -1,0 +1,28 @@
+.recent-transactions__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  .recent-transactions__body {
+    padding: 0 30px 19px;
+    min-width: 600px;
+
+    &.center {
+      align-content: center;
+      justify-content: center;
+    }
+
+    .recent-transactions__table-header {
+      font-size: 14px;
+      font-weight: bold;
+      color: #131313;
+      margin-bottom: 40px;
+    }
+
+    .recent-transactions__table-row {
+      font-size: 14px;
+      color: #131313;
+      margin-bottom: 40px;
+    }
+  }
+}

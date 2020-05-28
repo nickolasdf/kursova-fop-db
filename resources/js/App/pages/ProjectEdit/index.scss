@@ -1,0 +1,33 @@
+.project_edit_page {
+    .main_title_wrapper, .finance_info_wrapper {
+        margin-bottom: 24px;
+    }
+
+    .finance_info_item {
+        height: 320px;
+    }
+
+    .edit_button {
+        font-weight: bold;
+        font-size: 16px;
+        background-color: black;
+        border-radius: 2px;
+        padding: 8px 12px;
+        color: white;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #FFD63C;
+            color: black
+        }
+    }
+
+    .project-nav-buttons {
+        display: flex;
+        margin: 0 -0.5rem;
+
+        &__item {
+            margin: 0 0.5rem;
+        }
+    }
+}

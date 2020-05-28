@@ -1,0 +1,32 @@
+.hosting_form {
+    .add_site_btn_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin: 12px 0;
+    }
+
+    .add_site_btn {
+        display: flex;
+        align-items: center;
+        color: #3E6EA8;
+        font-size: 14px;
+
+        .add_site_icon {
+            font-size: 14px;
+            margin-left: 8px;
+        }
+    }
+
+    &__site-input-wrapper {
+        position: relative;
+    }
+
+    &__remove-site-btn {
+        position: absolute;
+        z-index: 1000;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        color: #e0e0e0;
+    }
+}

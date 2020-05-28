@@ -1,0 +1,54 @@
+.office_accounts_item {
+    padding: 16px;
+    border-bottom: 1px solid #efefef;
+    transition: background-color 0.2s;
+    .office_account_name, .office_account_total {
+        font-size: 16px;
+    }
+    .office_account_total_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .office_account_description {
+        display: block;
+        font-size: 12px;
+        color: #8a8d9a;
+    }
+    .office_account_symbol {
+        margin-right: 4px;
+    }
+    .office_account_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .office_account_actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .office_account_item {
+        position: relative;
+        height: 100%;
+    }
+    .office_account_item:before {
+        content: "";
+        position: absolute;
+        height: calc(100% + 32px);
+        width: 1px;
+        top: -16px;
+        right: 0;
+        background-color: #EFEFEF;
+    }
+    .office_icon_wrapper {
+        padding: 0 8px;
+    }
+}
+.accounts_none_title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+.office_accounts_wrapper {
+    border-top: 1px solid #efefef;
+}
+

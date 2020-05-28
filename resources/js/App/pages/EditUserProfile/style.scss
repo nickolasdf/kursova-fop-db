@@ -1,0 +1,170 @@
+$border-radius: 0.6rem;
+
+.divider {
+    margin: 2rem 1rem;
+    height: 1px;
+    border: 1px solid #EFEFEF;
+}
+
+.user-info {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+    background-color: white;
+    padding-bottom: 2rem;
+
+    &__header {
+        padding: 1rem 0 1rem 1rem;
+        font-weight: bold;
+    }
+
+    &__subheader {
+        padding-left: 1rem;
+        font-size: .9rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    &__card {
+        width: 100%;
+        height: 100%;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    &__card-button {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed #CFCFCF;
+        border-radius: 4px;
+        margin: 0 1rem;
+        background-color: #fafafa;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    &__card-button:hover {
+        background-color: #efefef;
+    }
+}
+
+.profile-form {
+    padding: 1rem;
+
+    label {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        font-size: 14px;
+    }
+
+    &__input {
+        border: 1px solid #EFEFEF;
+        background-color: #fafafa;
+        box-sizing: border-box;
+        outline: none;
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 4px;
+        padding-left: .75rem;
+    }
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+
+    &__input-wrapper {
+        width: 100%;
+    }
+
+    &__regular-input {
+        width: 100%;
+        height: 2.5rem;
+        padding-left: 1rem;
+        border: 1px solid #EFEFEF;
+        background: #FAFAFA;
+        border-radius: 4px;
+    }
+
+    &__avatar {
+        height: 35%;
+        width: 35%;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__form-container {
+        display: flex;
+        padding: 0.5rem 1rem;
+
+        p {
+            margin: 4px 0;
+            font-size: .8rem;
+        }
+    }
+
+    &__select-container {
+        padding-right: 0.5rem;
+    }
+
+    &__submit-button {
+        padding-left: 1rem;
+        padding-top: 0.24rem;
+    }
+}
+
+.card-type-switch {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: $border-radius;
+    border: 1px solid #E7EAED;
+    cursor: pointer;
+    flex: 1;
+    margin: 1rem 0;
+
+    &__section {
+        padding: 20px 0;
+        flex: 1;
+        text-align: center;
+        transition: .5s;
+    }
+
+    &__active {
+        font-weight: bold;
+        background: #F1F3F4;
+    }
+
+    div:first-child {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+    }
+
+    div:last-child {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+
+    &__section:hover {
+        background: #dee0e1;
+    }
+}
+
+.credit-card-form {
+    padding: 3.125rem;
+    background-color: #FAFAFA;
+
+    .border-radius-all {
+        border-radius: 4px;
+    }
+
+    input {
+        width: 100%;
+        height: 3.125rem;
+        padding-left: 1rem;
+    }
+
+    &__buttons-container {
+        background-color: white;
+        margin: 1.25rem 3.125rem;
+    }
+}

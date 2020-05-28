@@ -1,0 +1,31 @@
+.invoices-header {
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+.status-completed {
+    font-weight: bold;
+    background-color: rgba(44, 189, 20, 0.07);
+    padding: .3rem .5rem;
+    border-radius: 20px;
+    width: max-content;
+    margin-left: 1rem;
+    color: #2CBD14;
+    display: flex;
+}
+
+.status-error {
+    font-weight: bold;
+    background-color: rgba(255, 43, 43, 0.07);
+    padding: .3rem .5rem;
+    border-radius: 20px;
+    width: max-content;
+    margin-left: 1rem;
+    color: #FF2B2B;
+    display: flex;
+}
+
+.status-icon {
+    margin-right: .5rem;
+}

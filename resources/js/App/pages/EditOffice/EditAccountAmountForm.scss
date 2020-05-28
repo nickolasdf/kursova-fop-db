@@ -1,0 +1,19 @@
+.edit_account_amount_form {
+    background-color: #f9f9f9;
+    padding: 50px;
+    input {
+        font-size: 14px;
+        padding: 8px 12px;
+        width: 100%;
+    }
+    .form_input_row {
+        margin-top: -1px;
+    }
+    .form_amount_row {
+        font-size: 22px;
+        margin-bottom: 24px;
+        input {
+            font-size: 22px;
+        }
+    }
+}

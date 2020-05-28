@@ -1,0 +1,15 @@
+.hosting_edit_modal_wrapper {
+    display: flex;
+    height: 80vh;
+}
+.hosting_edit_form_wrapper, .hosting_comments_modal_wrapper {
+    width: 50%;
+}
+.hosting_edit_form_wrapper {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+.hosting-modal__tab-wrapper {
+    height: calc(100% - 60px);
+}

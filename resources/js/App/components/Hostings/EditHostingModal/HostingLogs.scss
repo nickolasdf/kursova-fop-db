@@ -1,0 +1,26 @@
+.hosting-logs-wrapper {
+    background-color: #FAFAFA;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+}
+.hosting-logs {
+    background-color: white;
+    height: 100%;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    overflow: auto;
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    &__created-at-date {
+        display: flex;
+        align-items: flex-end;
+        font-size: 0.7rem;
+        color: #929292;
+        white-space: nowrap;
+    }
+}

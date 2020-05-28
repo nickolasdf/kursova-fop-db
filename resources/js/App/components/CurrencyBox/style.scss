@@ -1,0 +1,29 @@
+.dashboard_currency_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard_currency_block {
+    display: flex;
+    border-radius: 2px;
+    .currency_input_wrapper {
+        display: flex;
+        margin: 0 12px;
+        padding: 8px 14px;
+        border: solid 1px #efefef;
+        border-radius: 15px;
+        background-color: #fafafa;
+    }
+    .currency_input_wrapper.editable {
+        border-bottom: none;
+    }
+    .dashboard_currency_label {
+        margin-right: 4px;
+    }
+}
+.dashboard_currency_input {
+    font-size: 14px;
+    padding: 4px 12px;
+}
+.dashboard_currency_inner_block {
+    margin: 12px 0;
+}

@@ -1,0 +1,140 @@
+.export_btn {
+    display: flex;
+    border: none;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 30px;
+    padding: 12px 0;
+}
+.toolbar_buttons {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.select_parent_input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.radio_input_container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.radio_input_container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid black;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radio_input_container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radio_input_container input:checked ~ .checkmark {
+    background-color: #ffd63c;
+    border: none;
+}
+.radio_input_container input:checked ~ .checkmark:after {
+    display: block;
+}
+.radio_input_container .checkmark:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: black;
+}
+.contragents_wrapper .delete_button {
+    color: #c24537;
+}
+.transactions_table  {
+    .table_actions {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        text-align: center;
+        margin: 0 4px;
+        font-size: 14px;
+        border-radius: 8px;
+        text-transform: capitalize;
+    }
+    .table_action_planned {
+        border: solid 1px #efefef;
+        background-color: #fafafa;
+        color: #8a8d9a;
+    }
+    .table_action_repeated {
+        border: solid 1px #efefef;
+        background-color: #fafafa;
+        padding: 8px;
+    }
+    .table_action_approved {
+        color: #000000;
+        border: solid 1px var(--yellow);
+        background-color: rgb(255, 244, 203);
+        transition: background-color 0.4s;
+        &:hover {
+            background-color: rgba(255, 214, 60, 1);
+        }
+    }
+    .table_actions_wrapper {
+        display: flex;
+    }
+    .finance_future_wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        white-space: nowrap;
+    }
+    .finance_symbol {
+        margin-left: 4px;
+    }
+    .future_amount {
+        color: #bfbfbf;
+        margin-left: 8px;
+    }
+    .table_title {
+        font-size: 22px;
+        font-weight: bold;
+        padding: 12px 18px;
+        border-bottom: 1px solid rgba(224, 224, 224, 1);
+    }
+    .transaction_table_account_item {
+        color: #8a8d9a;
+    }
+    .table_owner_avatar {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+}
+.approved_status_form {
+    padding: 20px;
+    .approved_form_input {
+        font-size: 14px;
+        padding: 4px 12px;
+    }
+    .button_group {
+        margin-top: 20px;
+    }
+}
+

@@ -1,0 +1,60 @@
+.project-page__container {
+
+  .project-page__nav-block {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    .project-page__project-add-btn {
+      color: #ffffff;
+      background-color: #131313;
+      font-size: 13px;
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 12px 20px;
+
+      &:hover {
+        color: #131313;
+        background-color: #ffd63c;
+      }
+    }
+  }
+}
+
+.project-page__modal__body {
+  .project-page__form_input {
+    height: 40px;
+    width: 100%;
+    font-size: 15px;
+    padding: 4px 8px;
+    margin-top: -1px;
+    box-shadow: 0 0 0 1px #cccccc inset;
+    border: none;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 0 2px #ffd63c inset;
+    }
+  }
+}
+
+.project-page__modal__controls {
+  .action_btn {
+    margin: 15px 0;
+    padding: 12px 22px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .action_btn:hover {
+    cursor: pointer;
+    background-color: #ffd63c;
+  }
+  .input_item {
+    height: 40px;
+    width: 100%;
+    font-size: 15px;
+    padding: 4px 8px;
+    margin-top: -1px;
+  }
+}

@@ -1,0 +1,122 @@
+$color-grey: #FAFAFA;
+
+$border-dashed: 1px dashed #DCE1E4;
+$border-regular: 1px solid #EFEFEF;
+$border-radius-small: 4px;
+
+.invoice-account-modal {
+    padding: 3.125rem 3.125rem 0 3.125rem;
+    background-color: #FAFAFA;
+
+    &__buttons-container {
+        padding: 2rem 3.125rem;
+    }
+
+    &__header {
+        margin-bottom: 3rem;
+
+        h4 {
+            font-weight: bold;
+        }
+    }
+}
+
+.popover {
+    &__item {
+        margin: .75rem .5rem;
+        cursor: pointer;
+    }
+}
+
+.element {
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+
+    &__button-container {
+        margin-top: 2rem;
+    }
+
+    &__item-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__right-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span:first-child {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.invoice-settings-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4.5rem;
+}
+
+.invoice-settings {
+
+    &__buttons-container {
+        margin: 2rem 0;
+    }
+
+    &__condition-container {
+        background-color: $color-grey;
+        border: $border-dashed;
+        border-radius: $border-radius-small;
+        padding: 1rem;
+    }
+
+    &__form-container {
+        background-color: white;
+        padding: 5rem;
+
+        label {
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        h2 {
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.settings-icon {
+    cursor: pointer;
+    color: grey;
+}
+
+.regular-input {
+    width: 100%;
+    height: 3.125rem;
+    background-color: #FFFFFF;
+    border: $border-regular;
+    padding-left: 1rem;
+}
+
+.label-bold {
+    font-weight: bold;
+}
+
+.buttons-container {
+    padding: 2rem 3.125rem;
+
+    button:first-child {
+        margin-right: 1rem;
+    }
+}

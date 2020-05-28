@@ -1,0 +1,17 @@
+.server_item_add_btn_wrapper {
+    height: 425px;
+    background-color: #EFEFEF;
+    transition: background-color 0.2s;
+    padding: 24px;
+    &:hover {
+        background-color: #e7e7e7;
+    }
+}
+.server_item_add_btn {
+    height: 100%;
+    width: 100%;
+    color: #B9BCC0;
+}
+.server_item_add_icon {
+    margin-bottom: 16px;
+}

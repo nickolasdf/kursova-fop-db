@@ -1,0 +1,29 @@
+.languages__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  .languages__body {
+    display: flex;
+    overflow: auto;
+    margin: 0 30px 19px;
+
+    &.center {
+      align-content: center;
+      justify-content: center;
+    }
+
+    .languages__lang-list {
+      display: flex;
+      flex: 0 1 auto;
+      flex-wrap: wrap;
+
+      .languages__lang-list-item {
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #131313;
+      }
+    }
+  }
+}

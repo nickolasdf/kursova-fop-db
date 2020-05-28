@@ -1,0 +1,19 @@
+.contragents {
+    &__email {
+        color: #3E6EA8;
+    }
+
+    &__balance-negative {
+        color: #FF2B2B;
+        font-weight: 600;
+    }
+
+    &__balance-positive {
+        color: #2CBD14;
+        font-weight: 600;
+    }
+
+    &__balance-neutral {
+        color: #6D707E;
+    }
+}

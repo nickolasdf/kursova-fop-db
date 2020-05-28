@@ -1,0 +1,303 @@
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+
+$color-grey-standart: #FAFAFA;
+$color-yellow-main: #FEBD16;
+
+.add-event-modal-container {
+    background-color: $color-grey-standart;
+    width: 75rem;
+}
+
+.event-modal {
+    padding: 3.125rem;
+
+    &__popover {
+        display: flex;
+        width: 14rem;
+        justify-content: flex-start;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+
+    &__picker-wrapper {
+        border: 1px solid #EFEFEF;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        padding-right: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1rem;
+        height: 3.125rem;
+    }
+
+    &__avatar {
+        margin: 0 3px;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    &__avatar-selected {
+        border: 2px solid #FEBD16;
+    }
+
+    &__input {
+        width: 100%;
+        height: 3.125rem;
+        padding-left: 2rem;
+        border: 1px solid #EFEFEF;
+    }
+
+    &__add-user {
+        display: flex;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-yellow-main;
+        margin: 0 3px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 1.35rem;
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+
+    hr {
+        border: 1px solid #EFEFEF;
+    }
+
+    &__textarea {
+        width: 100%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        border: 1px solid #EFEFEF;
+        background: #FFFFFF;
+        border-radius: $border-radius-medium;
+    }
+}
+
+.calendar {
+    margin: 0 4rem;
+
+    &__container {
+        display: flex;
+    }
+
+    &__calendar-header {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+        align-items: center;
+
+        svg {
+            cursor: pointer;
+        }
+
+        h4 {
+            font-weight: bold;
+            margin: 0 2rem;
+        }
+    }
+
+    &__events-container {
+        margin-top: 2.5rem;
+    }
+
+    &__side-section-labels {
+        span {
+            padding: .5rem;
+            margin-right: .5rem;
+            font-size: .875rem;
+            font-weight: bold;
+            border-radius: $border-radius-small;
+            cursor: pointer;
+            border-left-style: solid;
+        }
+    }
+
+    &__side-section-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1.3rem;
+    }
+
+    &__side-section {
+        flex-basis: 30rem;
+        padding: 1rem;
+        background-color: white;
+        border-right: $border-radius-small;
+        margin-right: 3rem;
+        height: 60rem;
+
+        h5 {
+            font-weight: bold;
+        }
+
+        &__switches-container {
+            svg {
+                cursor: pointer;
+                margin: 0 .5rem;
+            }
+        }
+    }
+
+    &__calendar-section {
+        width: 100%;
+        padding: 0 2rem 4rem 2rem;
+        background-color: white;
+        border-radius: $border-radius-small;
+    }
+
+    &__header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        h2 {
+            font-weight: bold;
+        }
+    }
+}
+
+.event-container {
+    border-radius: $border-radius-small;
+    margin-bottom: 1rem;
+    padding: .6rem;
+    border-left-style: solid;
+
+    &__avatars {
+        display: flex;
+    }
+
+    &__title {
+        font-size: .875rem;
+        font-weight: bold;
+    }
+
+    &__description {
+        margin: .8rem 0;
+        font-size: .75rem;
+    }
+
+    &__time {
+        margin-top: .2rem;
+        font-size: .75rem;
+    }
+}
+
+.avatar {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    height: 2rem;
+    width: 2rem;
+
+    &:not(:first-child) {
+        margin-left: -1rem;
+    }
+}
+
+// Manual style change for 'react-big-calendar' component
+.rbc-month-view {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.rbc-month-header {
+    margin-bottom: 1rem;
+}
+
+.rbc-header {
+    box-sizing: border-box;
+    border: none;
+    background-color: $color-grey-standart;
+    padding: 1rem 3px;
+}
+
+.rbc-off-range-bg {
+    background: repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 10px,
+            #f6f6f6 10px,
+            #f6f6f6 20px
+    ) !important;
+}
+
+.rbc-date-cell {
+    text-align: left;
+    margin-top: .3rem;
+    margin-left: .5rem;
+    color: grey;
+}
+
+.rbc-now {
+    color: black;
+}
+
+.rbc-event {
+    background-color: transparent;
+    margin: 0;
+}
+
+.test {
+    color: red;
+}
+
+.rbc-day-bg + .rbc-day-bg {
+    border-left: none;
+}
+
+.rbc-today {
+    background-color: transparent;
+    border: 2px solid #FFB342 !important;
+    box-sizing: border-box;
+}
+
+.rbc-show-more {
+    color: grey;
+    padding-left: 10px;
+    padding-top: 1px;
+}
+
+.rbc-overlay {
+    padding: 1rem;
+}
+
+.rbc-overlay-header {
+    padding: .5rem;
+}
+
+.rbc-event:focus {
+    outline: none;
+}
+
+.rbc-event.rbc-selected {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.rbc-row-bg div:last-child {
+    background-color: $color-grey-standart;
+}
+
+// Misc.
+
+.flex {
+    display: flex;
+}
+
+.border-round {
+    border-radius: $border-radius-small;
+}
+

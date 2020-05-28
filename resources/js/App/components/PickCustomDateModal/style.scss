@@ -1,0 +1,65 @@
+.pick-date__modal {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.04);
+    bottom: 0;
+    transform: translateY(calc(100% + 10px));
+}
+
+.pick-date__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    &:hover {
+        background-color: rgba(255, 214, 60, 0.2);
+    }
+}
+.pick-date__item__active {
+    background-color: rgba(255, 214, 60, 0.2);
+}
+
+.pick-date__triangle {
+    border: 10px solid transparent;
+    border-bottom: 10px solid #f9f9f9;
+    display: block;
+    width: 0;
+    transform: translate(50px, -99%);
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 13px;
+        background: #e0e0e0;
+        transform-origin: 0% 100%;
+    }
+    &::after {
+        transform: translate(-9px, -4px) rotate(45deg);
+    }
+    &::before {
+        transform: translate(9px, -3px) rotate(-45deg);
+    }
+}
+
+.pick-date__label {
+    font-size: 0.8125rem;
+    opacity: 0.6;
+    color: #000000;
+}
+
+.pick-date__input {
+    padding: 10px 12px;
+    border: solid 1px #e1e1e1;
+    border-radius: 4px;
+    margin-top: 10px;
+}

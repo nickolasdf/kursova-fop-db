@@ -1,0 +1,3 @@
+export const CHART_SUCCESS = "CHART_SUCCESS";
+export const CHART_LOADING = "CHART_LOADING";
+export const CHART_FAILURE = "CHART_FAILURE";

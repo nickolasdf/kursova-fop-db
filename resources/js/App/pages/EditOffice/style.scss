@@ -1,0 +1,61 @@
+.edit_office_page {
+    .office_input {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    .account_box {
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+        border-radius: 4px;
+        background-color: white;
+        padding: 12px 16px;
+    }
+    .account_box_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .account_description {
+        margin-bottom: 12px;
+        word-wrap: break-word;
+    }
+    .account_total {
+        margin-right: 8px;
+    }
+    .office_input_label {
+        margin-bottom: 12px;
+    }
+    .office_title {
+        margin-bottom: 24px;
+    }
+    .currency_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .accounts_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 24px 0;
+    }
+    .account_actions_block {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .delete_account_button {
+        font-size: 14px;
+        font-weight: bold;
+        width: 50%;
+        color: #c24537;
+    }
+    .account_amount_block {
+        display: flex;
+        align-items: center;
+        .item {
+            width: 100%;
+        }
+    }
+    .account_amount_label {
+        display: flex;
+        align-items: flex-end;
+    }
+}

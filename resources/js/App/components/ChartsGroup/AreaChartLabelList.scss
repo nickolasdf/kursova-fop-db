@@ -1,0 +1,15 @@
+.area_chart_label_list {
+    display: flex;
+    margin: 0;
+    li {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .label_name {
+        margin: 0 16px 0 8px;
+    }
+}

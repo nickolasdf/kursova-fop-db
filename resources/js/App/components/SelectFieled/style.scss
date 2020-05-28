@@ -1,0 +1,31 @@
+.select-label {
+    color: #000a12;
+    font-size: 0.9375rem;
+    display: block;
+}
+
+.select-container {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    margin-top: 10px;
+    font-size: 0.9375rem;
+    outline: none;
+}
+
+.select-container__select {
+    width: 100%;
+    padding: 11px 12px;
+    border: none;
+    background-color: transparent;
+    font-size: 0.9375rem;
+    outline: none;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+}
+
+.select-container__icon-container {
+    position: relative;
+    bottom: 33px;
+    left: 90.5%;
+    height: 0;
+}

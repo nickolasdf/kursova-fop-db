@@ -1,0 +1,74 @@
+.dashboard_page {
+    .currency_title {
+        margin: 0 42px 0 8px;
+    }
+    .dashboard_currency_wrapper {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .dashboard_total_title {
+        margin: 0 40px 0 0;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .detail_btn {
+        background-color: #ffd63c;
+        transition: background-color 0.5s, color 0.5s;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 0 12px;
+        height: 40px;
+        font-weight: bold;
+        &:hover {
+            background-color: #ffe68f;
+        }
+    }
+    .total_list_wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .transactions_table_wrapper {
+        margin-top: 24px;
+    }
+    .total_block {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        border-radius: 10px;
+        padding: 10px 12px;
+        .total_currency {
+            font-size: 16px;
+            font-family: PTSans, sans-serif;
+            color: white;
+            margin: 0 12px;
+        }
+        .total_list {
+            margin: 0 32px;
+        }
+        .currency_symbol {
+            color: #ffd63c;
+            margin: 0 4px;
+        }
+    }
+}
+.content {
+    display: flex;
+    flex: 1 0 auto;
+    height: auto;
+}
+
+.main {
+    background-color: #f6f6f4;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    height: 100%;
+}
+
+.main-container {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+

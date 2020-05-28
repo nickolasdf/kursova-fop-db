@@ -1,0 +1,25 @@
+.financial-info {
+    display: flex;
+    margin-top: 26px;
+    flex-wrap: wrap;
+}
+
+.financial-info__info-box {
+    flex-basis: 274px;
+}
+
+.financial-info__info-box--margin {
+    margin: 0 10px 0 0;
+}
+
+@media screen and (max-width: 677px) {
+    .financial-info__info-box--margin {
+        margin: 0 10px 10px 0;
+    }
+}
+
+@media screen and (max-width: 403px) {
+    .financial-info__info-box--margin {
+        margin: 0 0 10px 0;
+    }
+}

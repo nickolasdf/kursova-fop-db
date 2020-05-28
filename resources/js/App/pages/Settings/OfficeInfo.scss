@@ -1,0 +1,31 @@
+$spacing: 16px;
+.office_block {
+    padding: 0 12px;
+}
+
+.office_info_block {
+    position: relative;
+    font-size: 14px;
+    border-bottom: 1px solid #efefef;
+    padding-top: $spacing;
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: #efefef;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .office_info_item_name {
+        color: #6d707e;
+    }
+
+    .office_info_item_wrapper {
+        padding: 0 $spacing $spacing $spacing;
+    }
+}
+

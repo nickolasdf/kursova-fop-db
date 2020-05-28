@@ -1,0 +1,47 @@
+.form_actions_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 32px 50px;
+
+    &__main-actions {
+        display: flex;
+        margin: -0.5rem;
+
+        &__item {
+            margin: 0.5rem;
+        }
+    }
+}
+
+.form_action_btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.4s;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.form_submit_action_btn {
+    background-color: #ffd63c;
+
+    &:hover {
+        background-color: #ffec9a;
+    }
+}
+
+.form_cancel_action_btn {
+    border: solid 1px #e7eaed;
+    margin: 0 12px;
+    color: #7d818a;
+    background-color: transparent;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}

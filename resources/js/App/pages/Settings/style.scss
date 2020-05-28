@@ -1,0 +1,55 @@
+.settings_page {
+    .office_block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 4px;
+        .office_action_button {
+            font-size: 14px;
+            font-weight: bold;
+            width: 50%;
+        }
+        .edit_button {
+            color: #5d7cf6;
+        }
+        .delete_button {
+            color: #c24537;
+        }
+    }
+    .add_office_btn {
+        background-color: #ffd63c;
+        width: 100%;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-weight: bold;
+        padding: 16px 0;
+        margin: 32px 0;
+        transition: background-color 0.4s;
+        &:hover {
+            background-color: #ffe68f;
+        }
+    }
+    .account_items_table {
+        margin-top: 40px;
+    }
+    .employees_amount_title {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 13px;
+        color: #222222;
+        margin-right: 8px;
+    }
+}
+.office_add_name_input {
+    width: 100%;
+    font-size: 24px;
+    padding: 8px 16px;
+}
+.office_add_button_group {
+    padding: 16px 0;
+}
+.office_add_form {
+    padding: 0 24px;
+}

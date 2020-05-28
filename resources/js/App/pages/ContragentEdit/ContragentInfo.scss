@@ -1,0 +1,82 @@
+.contragent_info_block {
+    background-color: white;
+    border-radius: 2px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px 24px 0 24px;
+
+    .item_title {
+        min-width: 200px;
+        color: #6D707E;
+    }
+
+    .description_wrapper {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+    }
+
+    .description {
+        color: #b9b9b9;
+    }
+
+    .info_block_item {
+        flex: 1 1 auto;
+        align-items: center;
+        border-bottom: 1px solid #f6f6f4;
+    }
+}
+
+.info {
+
+    &__icon {
+        margin-right: 0.8rem;
+        color: #6D707E;
+        align-self: center;
+    }
+
+    &__title {
+        min-width: 6rem;
+        color: #6D707E;
+    }
+
+    &__balance-positive {
+        color: #2CBD14;
+        font-weight: 600;
+    }
+
+    &__balance-negative {
+        color: #FF2B2B;
+        font-weight: 600;
+    }
+
+    &__balance-neutral {
+        color: #6D707E;
+    }
+
+    &__email {
+        color: #3E6EA8;
+        cursor: pointer;
+    }
+
+    &__description-icon {
+        margin-right: 0.8rem;
+        color: #b9b9b9;
+    }
+
+    &__save-button {
+        margin: .5rem 0 1rem 0;
+    }
+}
+
+.info-edit-input {
+    width: 100%;
+    padding: 0.3rem;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+}

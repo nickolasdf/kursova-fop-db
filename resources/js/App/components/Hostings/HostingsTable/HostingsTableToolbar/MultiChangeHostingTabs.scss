@@ -1,0 +1,11 @@
+.multi-change-hosting-form-wrapper {
+    height: calc(100% - 60px);
+}
+.multi-change-hosting-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .form_wrapper {
+        flex-grow: 1;
+    }
+}

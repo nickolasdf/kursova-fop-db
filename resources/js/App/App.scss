@@ -1,0 +1,97 @@
+.App {
+    height: 100vh;
+    overflow: hidden;
+}
+
+input, textarea {
+    border: 1px solid #e0e0e0;
+    outline: none;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+label {
+    margin: 0;
+}
+
+body {
+    font-family: PT Sans;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans"
+}
+
+.form_wrapper {
+    padding: 50px;
+    background-color: #FAFAFA;
+}
+
+.form_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.form_item {
+    margin-bottom: 50px;
+}
+
+.form_row {
+    margin-top: -1px;
+}
+
+.form_margin_row {
+    margin: 8px 0;
+}
+
+.select_add_item_icon_wrapper {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+.select_add_item_icon {
+    background: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+}
+
+.styled_button {
+    background-color: #ffd63c;
+    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #ffe68f;
+    }
+}
+
+.card_wrapper {
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+}
+
+.section_item {
+    margin-bottom: 24px;
+}

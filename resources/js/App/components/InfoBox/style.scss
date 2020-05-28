@@ -1,0 +1,25 @@
+.info-box {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    font-size: 15px;
+    border-radius: 2px;
+    flex: 0 0 auto;
+}
+
+.info-box__office-title {
+    font-weight: bold;
+    margin-right: 24px;
+}
+.info-box__total {
+    border-radius: 2px;
+    background-color: rgba(255, 214, 60, 0.1);
+    padding: 4px 8px;
+    margin-left: 16px;
+}
+.info-box__row {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+

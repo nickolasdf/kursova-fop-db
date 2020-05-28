@@ -1,0 +1,88 @@
+.project-form__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    .input-wrapper {
+
+        position: relative;
+
+        .project-page__form_input {
+            height: 40px;
+            width: 100%;
+            font-size: 15px;
+            padding: 4px 8px;
+            margin-top: -1px;
+            box-shadow: 0 0 0 1px #cccccc inset;
+            border: none;
+            outline: none;
+
+            &:focus {
+                box-shadow: 0 0 0 2px #ffd63c inset;
+            }
+        }
+
+        .input-validate-error {
+            position: absolute;
+            top: 49px;
+            left: 0;
+            right: 0;
+            background-color:  lightcoral;
+            color: white;
+            z-index: 1;
+            padding: 8px;
+
+            &::before {
+                content: "";
+                margin-left: -10px;
+                width: 20px;
+                height: 20px;
+                transform: rotate(45deg);
+                background-color:  lightcoral;
+                position: absolute;
+                top: -5px;
+                left: 50%;
+                z-index: 1;
+            }
+        }
+    }
+
+    .controls-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .action_btn {
+            margin: 15px 0;
+            padding: 12px 22px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: bold;
+
+            &.primary {
+                color: #ffffff;
+                background-color: #131313;
+            }
+        }
+
+        .action_btn:hover {
+            cursor: pointer;
+            background-color: #ffd63c;
+        }
+
+        .delete_btn {
+            color: #c24537;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 12px 22px;
+        }
+
+    }
+    .input_item {
+        height: 40px;
+        width: 100%;
+        font-size: 15px;
+        padding: 4px 8px;
+        margin-top: -1px;
+    }
+}

@@ -1,0 +1,31 @@
+.chart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.chart-pick-date__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.pick-date__more-options {
+    font-size: 0.94rem;
+    font-weight: bold;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+}
+
+.pick-date__arrow-down {
+    margin-left: 0.37%;
+}
+.area_chart_menu_icon {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    z-index: 1000;
+}

@@ -1,0 +1,28 @@
+.users_wrapper {
+    font-family: PT Sans;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.users_title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 24px;
+}
+.users_nav_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.users_add_btn {
+    color: #ffffff;
+    background-color: #131313;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 12px 20px;
+}
+

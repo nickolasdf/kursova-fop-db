@@ -1,0 +1,144 @@
+.comments_block {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+
+    .input_wrapper, form, input {
+        width: 100%;
+        height: 100%;
+    }
+
+    input {
+        border: none;
+        font-size: 16px;
+    }
+
+    .comment_display_block {
+        scroll-behavior: smooth;
+        overflow: auto;
+        flex-grow: 1;
+    }
+
+    .comment_input_block {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .input_icon_wrapper {
+        padding: 8px 16px;
+    }
+
+    .input_icon {
+        font-size: 22px;
+    }
+
+    .attach_file_input {
+        display: none;
+    }
+
+    .attach_file_name, .comment_attach_file_name {
+        color: #5d7cf6;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .comment_image_wrapper {
+        cursor: pointer;
+        padding: 12px;
+        margin-top: 8px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    .comment_image {
+        height: 200px;
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .attach_file_name {
+        padding: 0 12px;
+    }
+
+    .clear_attach_file_icon {
+        cursor: pointer;
+    }
+
+    .attach_file_name_wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .comment_wrapper {
+        display: flex;
+        padding: 16px;
+        background-color: white;
+    }
+
+    .comment_sticky {
+        position: sticky;
+        top: 0;
+        background-color: #f0f0f0;
+        z-index: 1;
+    }
+
+    .owner_name {
+        font-weight: bold;
+        margin-right: 12px;
+    }
+
+    .comment_date {
+        font-size: 12px;
+        color: #929292;
+    }
+
+    .profile_image {
+        margin-right: 12px;
+    }
+
+    .comment_text {
+        margin-top: 8px;
+    }
+
+    .comment_text pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .comments_send_btn {
+        background-color: #ffd63c;
+        border-radius: 4px;
+        padding: 8px 16px;
+        transition: background-color 0.4s;
+
+        &:hover {
+            background-color: rgba(255, 214, 60, 0.5);
+        }
+    }
+
+    .comment_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .more_vert_icon {
+        color: #888888;
+    }
+
+    .fix_comment_btn {
+        margin: 0 8px;
+    }
+}
+
+.dialog_image {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}

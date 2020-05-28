@@ -1,0 +1,43 @@
+.current-rate-chart__container {
+    max-width: 277.5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    position: relative;
+
+    .current-rate-chart__overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: black;
+        text-align: center;
+        pointer-events: none;
+
+        .donut_overlay_data {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            pointer-events: none;
+        }
+        .donut_amount_title {
+            font-size: 22px;
+            color: black;
+            font-waight: bold;
+        }
+        .donut_label {
+            font-size: 14px;
+            color: #131313;
+        }
+    }
+}

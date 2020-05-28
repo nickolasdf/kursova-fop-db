@@ -1,0 +1,56 @@
+.contragents_edit_form {
+    background-color: #FAFAFA;
+
+    .form_row {
+        margin-top: -1px;
+    }
+
+    .description_row {
+        margin-bottom: 24px;
+    }
+
+    .vacancy_name {
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+
+    .salary_to_input {
+        border-left: none;
+        border-right: none;
+    }
+
+    .actions_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .display-flex {
+        display: flex;
+    }
+
+    .delete_btn {
+        text-transform: uppercase;
+        color: #c24537;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 24px;
+    }
+}
+
+.textarea-margin {
+    margin-bottom: 2rem;
+}
+
+.border-round-top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.border-round-bottom {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contragents-form-fields {
+    padding: 3.125rem;
+}

@@ -1,0 +1,10 @@
+.server_form {
+    &__plan_row {
+        margin-top: 24px;
+    }
+    &__radio_group_wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}

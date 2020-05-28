@@ -1,0 +1,28 @@
+.hosting_edit_accesses__form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.hosting_edit_accesses__form-row {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.hosting_edit_accesses__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    &__content-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        flex-grow: 1;
+    }
+}
+.hosting_edit_accesses__form-wrapper {
+    height: 100%;
+}

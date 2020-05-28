@@ -1,0 +1,12 @@
+.hosting_form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &__inner-wrapper {
+        flex-grow: 1;
+        overflow: auto;
+    }
+}
+.hosting-form__actions_wrapper {
+    margin-top: 50px;
+}

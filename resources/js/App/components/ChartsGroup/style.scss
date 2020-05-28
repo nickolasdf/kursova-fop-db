@@ -1,0 +1,36 @@
+$item-margin: 0.5;
+
+@function calcWidth($width) {
+    @return $width - ($item-margin * 2);
+}
+
+.dashboard_charts_wrapper {
+    margin: -$item-margin * 1%;
+
+    .area_chart_wrapper {
+        display: inline-block;
+        float: left;
+        width: calcWidth(60) * 1%;
+    }
+
+    .donut_chart_wrapper {
+        width: calcWidth(20) * 1%;
+        display: inline-block;
+    }
+}
+
+.dashboard_charts_wrapper > * {
+    margin: $item-margin * 1%;
+}
+
+@media (max-width: 1400px) {
+    .dashboard_charts_wrapper {
+        .area_chart_wrapper {
+            width: calcWidth(100) * 1%;
+        }
+
+        .donut_chart_wrapper {
+            width: calcWidth(50) * 1%;
+        }
+    }
+}
