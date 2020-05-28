@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class FopResource extends JsonResource
+class FopOnlyResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -25,10 +25,6 @@ class FopResource extends JsonResource
             'phone' =>  $this->phone,
             'email' =>  $this->email,
             'taxNumber' =>  $this->taxNumber,
-
-            'fop_incomes' => FopIncomeOnlyResource::collection($this->_fop_incomes),
-            'fop_taxes' => FopTaxOnlyResource::collection($this->_fop_taxes),
-
         ];
     }
 }
