@@ -48,17 +48,4 @@ trait TableData
         return $query;
     }
 
-    public static function scopeSumAccount($query, $ratesQuery) {
-        return $query->withCount(['_accounts as balance' => function($query) use ($ratesQuery) {
-            $query->select(DB::raw("SUM((total) * {$ratesQuery} AS balance"));
-        }]);
-    }
-
-    /*public static function scopeForTable($query, Request $request) {
-        $sortable = self::getSortableFields();
-        if(in_array($request->order_field, $sortable)) {
-            return $query->orderBy($request->get('order_field', 'role'), $request->get('order_type', 'DESC'));
-        }
-        return $query;
-    }*/
 }
