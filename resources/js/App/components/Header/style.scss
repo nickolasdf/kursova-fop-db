@@ -1,47 +1,4 @@
 .header {
-    height: 60px;
-    display: flex;
-    background-color: white;
-    nav {
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-    nav, .nav_item {
-        margin: 0 50px;
-    }
-    .profile_menu {
-        display: flex;
-        justify-content: center;
-    }
-    .currency_wrapper {
-        display: flex;
-        justify-content: center;
-    }
-    .user_info_block {
-        display: flex;
-    }
-}
-
-.header__logo {
-    height: 60px;
-    background-color: #000;
-    display: flex;
-    width: 260px;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 15px;
-}
-
-.header__search-input {
-    display: flex;
-    flex: 1 0 auto;
-}
-@media only screen and (max-width: 768px) {
-    .header {
-        .currency_wrapper {
-            display: none;
-        }
-    }
+  display: flex;
+  justify-content: space-between;
 }

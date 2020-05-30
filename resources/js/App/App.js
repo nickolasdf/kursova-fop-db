@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Router, Switch } from 'react-router-dom';
 import Login from './pages/AuthPage';
 import Admin from './pages/Admin';
+import FopInfo from "./pages/FopInfo";
 import { logInFailure, logInSuccess, logOut, setUser } from './reducers/Auth/actions';
 import { throwAlert } from './reducers/App/actions';
 import { connect } from 'react-redux';
@@ -48,7 +49,7 @@ class App extends React.Component {
                         <Switch>
                             <GuestRoute exact path="/" component={Login}/>
                             <PrivateRoute exact path="/admin" component={Admin}/>
-                            <PrivateRoute exact path="/fop/:id" component={Admin}/>
+                            <PrivateRoute exact path="/fop/:id" component={FopInfo}/>
                             <Route exact path="/404" component={PageNotFound}/>
                             <Route component={PageNotFound}/>
                         </Switch>

@@ -6,6 +6,7 @@ const FormWrapper = ({ onClose, children, title }) => {
     return (
         <div className="form-wrapper">
             <h3>{title}</h3>
+            <br />
             {children}
             <div className="form-wrapper__actions">
                 <div className="form-wrapper__actions__item">

@@ -204,7 +204,14 @@ const BankDetail = {
 const Fop = {
     getAll: () => requests.get('/fop'),
     create: body => requests.post('/fop', body),
-    delete: id => requests.del(`/fop/${id}`)
+    delete: id => requests.del(`/fop/${id}`),
+    getFopInfo: id => requests.get(`/fop/${id}`),
+    addIncome: (id, body) => requests.post(`/fop/${id}/income`, body),
+    edit: (id, body) => requests.put(`/fop/${id}`, body)
+};
+const Tax = {
+    getAll: () => requests.get('/tax'),
+    edit: (id, body) => requests.put(`/tax/${id}`, body)
 };
 
 export default {
@@ -229,5 +236,6 @@ export default {
     Servers,
     Comments,
     BankDetail,
-    Fop
+    Fop,
+    Tax
 };

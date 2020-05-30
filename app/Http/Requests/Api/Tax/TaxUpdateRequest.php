@@ -26,8 +26,8 @@ class TaxUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'tax' => ['numeric', 'exists:texes,id'],
-            'title' => ['required', 'string', 'max:3000'],
+            'tax' => ['numeric', 'exists:taxes,id'],
+            'title' => ['nullable', 'string', 'max:3000'],
             'percent' => ['required', 'string', 'max:3000'],
         ];
     }

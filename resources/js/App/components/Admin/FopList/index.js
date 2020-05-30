@@ -17,9 +17,11 @@ import requests from '../../../requests';
 import { getFops } from '../../../reducers/FopList/actions';
 import { throwAlert } from '../../../reducers/App/actions';
 import { SUCCESS } from '../../../config/alertVariants';
+import { useHistory } from "react-router-dom"
 
 const FopList = ({ data = [] }) => {
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const deleteFop = id => () => {
         requests.Fop.delete(id).then(() => {
@@ -27,6 +29,11 @@ const FopList = ({ data = [] }) => {
             dispatch(getFops());
         });
     };
+
+    const handleClickRow = id => () => {
+        history.push(`/fop/${id}`)
+    };
+
     return (
         <TableContainer component={Paper}>
             <Table aria-label="simple table">
@@ -48,7 +55,7 @@ const FopList = ({ data = [] }) => {
                     {
                         data.map(item => {
                             return (
-                                <TableRow>
+                                <TableRow style={{ cursor: "pointer" }} key={item.id} onClick={handleClickRow(item.id)}>
                                     <TableCell align="left">{item.name}</TableCell>
                                     <TableCell align="left">{item.address}</TableCell>
                                     <TableCell align="left">{item.activities.map(activity => activity + ' ')}</TableCell>

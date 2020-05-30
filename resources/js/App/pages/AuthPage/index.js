@@ -38,7 +38,7 @@ const Login = ({ logInSuccess, throwAlert, history }) => {
 
     return (
         <div className="auth_page">
-            <div className="container auth_page_content">
+            <div className="auth_page_content">
                 <div className="content_block">
                     <div>
                         <form
@@ -47,7 +47,7 @@ const Login = ({ logInSuccess, throwAlert, history }) => {
                             className="auth-form"
                         >
                             <div className="auth-form__field">
-                                <label className="auth_title">Email</label>
+                                <label className="auth_title">Електронна пошта</label>
                                 <TextField
                                     onChange={e => setEmail(e.target.value)}
                                     value={email}
@@ -58,7 +58,7 @@ const Login = ({ logInSuccess, throwAlert, history }) => {
                                 />
                             </div>
                             <div className="auth-form__field">
-                                <label className="auth_title">Password</label>
+                                <label className="auth_title">Пароль</label>
                                 <TextField
                                     onChange={e => setPassword(e.target.value)}
                                     value={password}

@@ -1,34 +1,30 @@
-import React, { memo } from "react";
+import React from "react";
+import { Button } from "@material-ui/core";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut } from "../../reducers/Auth/actions";
 import "./style.scss";
-import SearchInput from "../SearchInput";
-import ProfileMenu from "../ProfileMenu";
-import CurrencyBox from "../CurrencyBox";
-import { useLocation } from "react-router-dom";
-import ShortUserInfo from "./ShortUserInfo";
 
 const Header = () => {
-    const location = useLocation();
+    const dispatch = useDispatch();
+    const isAuthenticated = useSelector(state => state.Auth.isAuthenticated)
+
+    const logOutUser = () => {
+        dispatch(logOut());
+    };
 
     return (
         <header className="header">
-            <nav>
-                <div className="header__search-input nav_item">
-                    <SearchInput />
+            <div>
+                <h1>База даних ФОПа</h1>
+            </div>
+            {
+                isAuthenticated &&
+                <div>
+                    <Button variant="outlined" color="primary" onClick={logOutUser}>Вийти</Button>
                 </div>
-                <div className="nav_item">
-                    {location.pathname === "/dashboard" ? (
-                        <div className="currency_wrapper">
-                            <CurrencyBox />
-                        </div>
-                    ) : null}
-                </div>
-                <div className="user_info_block nav_item">
-                    <ShortUserInfo />
-                    <ProfileMenu />
-                </div>
-            </nav>
+            }
         </header>
-    );
+    )
 };
 
-export default memo(Header);
+export default Header;

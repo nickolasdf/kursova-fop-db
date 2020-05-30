@@ -5,7 +5,7 @@ export const getFops = (params = {}) => {
     return dispatch => {
         dispatch(fopsLoading(true));
 
-        requests.Fop.getAll({ params })
+        requests.Fop.getAll()
             .then(resp => {
                 dispatch(fopsSuccess({
                     data: resp.data.data,

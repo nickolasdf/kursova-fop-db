@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Grid, MenuItem, Select, TextField } from '@material-ui/core';
 import { DatePicker } from '@material-ui/pickers';
 import { useDispatch } from 'react-redux';
@@ -9,7 +9,7 @@ import { SUCCESS } from '../../config/alertVariants';
 import { getFops } from '../../reducers/FopList/actions';
 import "./index.scss";
 
-const FopForm = ({ onClose }) => {
+const FopForm = ({ onClose, isEdit = false, defaultData, updateData }) => {
     const [form, setForm] = useState({
         name: '',
         address: '',
@@ -21,6 +21,22 @@ const FopForm = ({ onClose }) => {
         email: '',
         taxNumber: ''
     });
+
+    useEffect(() => {
+        if(isEdit) {
+            setForm({
+                name: defaultData.name,
+                address: defaultData.address,
+                activities: defaultData.activities,
+                registrationNumber: defaultData.registrationNumber,
+                registerLocation: defaultData.registerLocation,
+                registrationDate: defaultData.registrationDate,
+                phone: defaultData.phone,
+                email: defaultData.email,
+                taxNumber: defaultData.taxNumber
+            })
+        }
+    }, [defaultData]);
 
     const dispatch = useDispatch();
 
@@ -47,13 +63,22 @@ const FopForm = ({ onClose }) => {
 
     const submitForm = event => {
         event.preventDefault();
-        requests.Fop.create(form).then(resp => {
-            onClose();
-            dispatch(throwAlert(SUCCESS, 'ФОП успішно створений'));
-            dispatch(getFops());
-        });
-    };
+        if(!isEdit) {
+            requests.Fop.create(form).then(resp => {
+                onClose();
+                dispatch(throwAlert(SUCCESS, 'ФОП успішно створений'));
+                dispatch(getFops());
+            });
+        }
+        else {
+            requests.Fop.edit(defaultData.id, form).then(() => {
+                onClose();
+                dispatch(throwAlert(SUCCESS, 'Дані успішно змінено'));
+                updateData();
+            })
+        }
 
+    };
     return (
         <form className="fop-form" onSubmit={submitForm}>
             <FormWrapper onClose={onClose}>
@@ -61,7 +86,7 @@ const FopForm = ({ onClose }) => {
                     <Grid container alignItems="flex-end">
                         <Grid item xs={4}><label className="form-label">ПІБ</label></Grid>
                         <Grid item xs={8}>
-                            <TextField fullWidth={true} onChange={handleChange('name')}/>
+                            <TextField value={form.name} fullWidth={true} onChange={handleChange('name')}/>
                         </Grid>
                     </Grid>
                 </div>
@@ -69,7 +94,7 @@ const FopForm = ({ onClose }) => {
                     <Grid container alignItems="flex-end">
                         <Grid item xs={4}><label className="form-label">Адреса</label></Grid>
                         <Grid item xs={8}>
-                            <TextField fullWidth={true} onChange={handleChange('address')}/>
+                            <TextField value={form.address} fullWidth={true} onChange={handleChange('address')}/>
                         </Grid>
                     </Grid>
                 </div>
@@ -94,7 +119,7 @@ const FopForm = ({ onClose }) => {
                     <Grid container alignItems="flex-end">
                         <Grid item xs={4}><label className="form-label">Реєстраційний номер</label></Grid>
                         <Grid item xs={8}>
-                            <TextField fullWidth={true} onChange={handleChange('registrationNumber')}/>
+                            <TextField value={form.registrationNumber} fullWidth={true} onChange={handleChange('registrationNumber')}/>
                         </Grid>
                     </Grid>
                 </div>
@@ -102,7 +127,7 @@ const FopForm = ({ onClose }) => {
                     <Grid container alignItems="flex-end">
                         <Grid item xs={4}><label className="form-label">Місце реєстрації</label></Grid>
                         <Grid item xs={8}>
-                            <TextField fullWidth={true} onChange={handleChange('registerLocation')}/>
+                            <TextField value={form.registerLocation} fullWidth={true} onChange={handleChange('registerLocation')}/>
                         </Grid>
                     </Grid>
                 </div>
@@ -124,7 +149,7 @@ const FopForm = ({ onClose }) => {
                     <Grid container alignItems="flex-end">
                         <Grid item xs={4}><label className="form-label">Номер телефону</label></Grid>
                         <Grid item xs={8}>
-                            <TextField fullWidth={true} onChange={handleChange('phone')}/>
+                            <TextField value={form.phone} fullWidth={true} onChange={handleChange('phone')}/>
                         </Grid>
                     </Grid>
                 </div>
@@ -132,7 +157,7 @@ const FopForm = ({ onClose }) => {
                     <Grid container alignItems="flex-end">
                         <Grid item xs={4}><label className="form-label">Електронна пошта</label></Grid>
                         <Grid item xs={8}>
-                            <TextField fullWidth={true} onChange={handleChange('email')}/>
+                            <TextField value={form.email} fullWidth={true} onChange={handleChange('email')}/>
                         </Grid>
                     </Grid>
                 </div>
@@ -140,7 +165,7 @@ const FopForm = ({ onClose }) => {
                     <Grid container alignItems="flex-end">
                         <Grid item xs={4}><label className="form-label">Податковий номер</label></Grid>
                         <Grid item xs={8}>
-                            <TextField fullWidth={true} onChange={handleChange('taxNumber')}/>
+                            <TextField value="taxNumber" fullWidth={true} onChange={handleChange('taxNumber')}/>
                         </Grid>
                     </Grid>
                 </div>

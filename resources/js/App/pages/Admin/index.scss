@@ -1,1 +1,6 @@
-
+.fop-list {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+}

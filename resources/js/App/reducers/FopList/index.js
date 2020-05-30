@@ -2,12 +2,6 @@ import * as ActionTypes from './actionTypes';
 
 const initialState = {
     data: [],
-    tableParams: {
-        order_field: 'name',
-        order_type: 'ASC',
-        per_page: 20,
-        page: 1
-    },
     meta: '',
     links: '',
     error: '',

@@ -45,7 +45,7 @@ Route::group(['namespace' => 'Api'], function () {
             Route::get('/{fop}', 'FopController@show');
             Route::put('/{fop}', 'FopController@update');
             Route::delete('/{fop}', 'FopController@delete');
-            Route::post('/{fop}/income', 'HostingController@addIncome');
+            Route::post('/{fop}/income', 'FopController@addIncome');
 
         });
 
